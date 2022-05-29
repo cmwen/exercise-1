@@ -3,7 +3,7 @@ import * as Styled from "./AddToCartPage.styles";
 import * as StyledForm from "../components/Form.styles";
 import CartList from "../components/CartList";
 import { Cart } from "../model/cart";
-import { addToCart, calculateInvoice } from "../utils/cart.helper";
+import { addToCart, calculateInvoice, isValidItem } from "../utils/cart.helper";
 
 export default function AddToCartPage() {
   const [carts, setCarts] = React.useState<Cart[]>([]);
@@ -14,6 +14,9 @@ export default function AddToCartPage() {
   const handleAddItem = () => {
     const newCarts = addToCart(carts, { description, cost, quantity });
     setCarts(newCarts);
+    setDescription("");
+    setCost(0);
+    setQuantity(0);
   };
 
   const handleSubmit = () => {
@@ -51,13 +54,13 @@ export default function AddToCartPage() {
             onChange={(e) => setQuantity(Number(e.target.value))}
           />
         </StyledForm.Group>
-        <StyledForm.Button onClick={handleAddItem}>Add Item</StyledForm.Button>
+        <StyledForm.Button onClick={handleAddItem} disabled={!isValidItem({description, cost, quantity})}>Add Item</StyledForm.Button>
       </Styled.ActionBar>
       <CartList carts={carts} />
       <div>
-        Total: <span>{calculateInvoice(carts)}</span>
+        Total: <span>$ {calculateInvoice(carts)}</span>
       </div>
-      <StyledForm.Button onClick={handleSubmit}>Submit invoices</StyledForm.Button>
+      <StyledForm.Button onClick={handleSubmit} disabled={carts.length === 0}>Submit invoices</StyledForm.Button>
     </Styled.PageWrapper>
   );
 }

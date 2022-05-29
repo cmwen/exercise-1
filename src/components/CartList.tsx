@@ -19,9 +19,9 @@ export default function CartList({ carts }: CartListProps) {
       {carts.map((cart) => (
         <Styled.TableRow key={cart.description}>
           <Styled.TableCell>{cart.description}</Styled.TableCell>
-          <Styled.TableCell>{cart.cost}</Styled.TableCell>
+          <Styled.TableCell>$ {cart.cost}</Styled.TableCell>
           <Styled.TableCell>{cart.quantity}</Styled.TableCell>
-          <Styled.TableCell>{cart.cost * cart.quantity}</Styled.TableCell>
+          <Styled.TableCell>$ {cart.cost * cart.quantity}</Styled.TableCell>
         </Styled.TableRow>
       ))}
       </tbody>

@@ -12,6 +12,10 @@ export const Button = styles.button`
     font-weight: bold;
     font-size: 1em;
     transition: background-color;
+    &:disabled {
+        background-color: lightgray;
+        border: 1px solid lightgray;
+    }
 `;
 
 export const Label = styles.label`
