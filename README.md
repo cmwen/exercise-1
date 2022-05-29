@@ -6,7 +6,7 @@ To get a better idea of your skills, we'd like you to implement a basic invoicin
 
 You should spend no more than one hour on this exercise, allowing 10-15 minutes for a write-up at the end. We don't expect you to complete everything, but we'd like you to write down (at the bottom of this file) a high-level overview of what else you would do to complete the task, and then what else you might do to to get the code to a production-grade state.
 
-This repository was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). 
+This repository was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 If you are not comfortable with React, please feel free to start from scratch with something you are comfortable with, be it a different framework, or vanilla JavaScript + HTML + CSS.
 
@@ -18,9 +18,9 @@ We want to see code that speaks to your strengths. If you feel your strengths ar
 
 ![Invoice wireframe](public/frontend_peer_programming_interview_720.png)
 
-The design consists of three input fields and a button laid out horizontally. The input fields are: Description, Cost and Quantity. 
+The design consists of three input fields and a button laid out horizontally. The input fields are: Description, Cost and Quantity.
 
-The button text is "Add item", and when clicked, it should add a new row to a table below the input fields. 
+The button text is "Add item", and when clicked, it should add a new row to a table below the input fields.
 
 The table has four columns: Description, Cost, Quantity, and Price, where the Price is the Cost of the item multiplied by the Quantity.
 
@@ -33,3 +33,20 @@ We look forward to seeing what you come up with!
 ## Your write-up
 
 Tell us what you'd do next if you had more time, and what else you might do to to get the code to a production-grade state.
+
+- [ ] Clarify the requirements
+- [ ] More Tests
+  - [ ] Unit tests
+  - [ ] Integration tests
+  - [ ] End-to-end tests
+  - [ ] Performance tests
+- [ ] Adding storybooks
+- [ ] Accessibility
+  - [ ] Accessibility tests
+  - [ ] Accessibility audit
+- [ ] Code Style
+  - [ ] Prettier
+  - [ ] linting
+- [ ] Code Quality
+  - [ ] Code coverage
+  - [ ] Code review

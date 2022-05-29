@@ -21,7 +21,7 @@ export default function AddToCartPage() {
 
   const handleSubmit = () => {
     console.log(carts);
-  }
+  };
 
   return (
     <Styled.PageWrapper>
@@ -54,13 +54,22 @@ export default function AddToCartPage() {
             onChange={(e) => setQuantity(Number(e.target.value))}
           />
         </StyledForm.Group>
-        <StyledForm.Button onClick={handleAddItem} disabled={!isValidItem({description, cost, quantity})}>Add Item</StyledForm.Button>
+        <StyledForm.Button
+          onClick={handleAddItem}
+          disabled={!isValidItem({ description, cost, quantity })}
+        >
+          Add Item
+        </StyledForm.Button>
       </Styled.ActionBar>
       <CartList carts={carts} />
-      <div>
+      <Styled.FlexEnd>
         Total: <span>$ {calculateInvoice(carts)}</span>
-      </div>
-      <StyledForm.Button onClick={handleSubmit} disabled={carts.length === 0}>Submit invoices</StyledForm.Button>
+      </Styled.FlexEnd>
+      <Styled.FlexEnd>
+        <StyledForm.Button onClick={handleSubmit} disabled={carts.length === 0}>
+          Submit invoices
+        </StyledForm.Button>
+      </Styled.FlexEnd>
     </Styled.PageWrapper>
   );
 }

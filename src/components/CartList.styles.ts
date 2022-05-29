@@ -6,7 +6,6 @@ export const Table = styles.table`
 `;
 
 export const TableRow = styles.tr`
-    border-bottom: 1px solid #ccc;
     &:nth-child(even) {background: lightblue}
     &:nth-child(odd) {background: #FFF}
 `;
@@ -22,8 +21,4 @@ export const TableHeader = styles.th`
 export const TableCell = styles.td`
     text-align: left;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
-    &:last-child {
-        border-right: 1px solid #ccc;
-    }   
 `;

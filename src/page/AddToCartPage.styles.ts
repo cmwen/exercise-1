@@ -16,3 +16,7 @@ export const ActionBar = styles.div`
     border-bottom: 2px solid #333;
     flex-wrap: wrap;
 `;
+
+export const FlexEnd = styles.div`
+  align-self: flex-end;
+`;
