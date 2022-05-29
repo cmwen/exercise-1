@@ -35,12 +35,15 @@ We look forward to seeing what you come up with!
 Tell us what you'd do next if you had more time, and what else you might do to to get the code to a production-grade state.
 
 - [ ] Clarify the requirements
+  - [ ] Edge Cases/Unhappy path
+  - [ ] UX Design
+  - [ ] Design System
 - [ ] More Tests
   - [ ] Unit tests
   - [ ] Integration tests
   - [ ] End-to-end tests
   - [ ] Performance tests
-- [ ] Adding storybooks
+- [ ] Building reusable components with storybooks
 - [ ] Accessibility
   - [ ] Accessibility tests
   - [ ] Accessibility audit
